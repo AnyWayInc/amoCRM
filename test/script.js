@@ -1,4 +1,3 @@
-
 // window.addEventListener("DOMContentLoaded", (event) => {
 //   let element = document.querySelector("button");
 //   window.addEventListener("change", function (event) {
@@ -65,12 +64,28 @@ obj = {
 };
 
 let second_obj = [];
-let names = 'name';
-Object.keys(obj).forEach(function(key,index) {
-  second_obj.push({id:index+1,name:obj[key].NAME,idEl:obj[key].ID});
-})
+let names = "name";
+Object.keys(obj).forEach(function (key, index) {
+  second_obj.push({ id: index, name: obj[key].NAME, idEl: obj[key].ID });
+});
 console.log(second_obj);
-// const res = second_obj.map((el,index)=>{
-//     return {id: index+1, name: el}
-// })
-// console.log(res)
+
+let firsObj = 6;
+let secondObj = 2;
+let threeObj = 1;
+let firstElID = 0;
+let secondElID = 0;
+let threeElID = 0;
+for (let i = 0; i <= second_obj.length - 1; i++) {
+  if (firsObj === second_obj[i].id) {
+    firstElID = second_obj[i].idEl;
+  }
+  if (secondObj === second_obj[i].id) {
+    secondElID = second_obj[i].idEl;
+  }
+  if (threeObj === second_obj[i].id) {
+    threeElID = second_obj[i].idEl;
+  }
+}
+console.log(firstElID,secondElID, threeElID);
+// console.log(second_obj[1].id);
